@@ -1,0 +1,5 @@
+
+public enum TerrainType
+{
+   DUNGEON, HILL, GRASSLANDS, FOREST, MOUNTAINS, SNOW, TOWN
+}

@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Room
+comment1.params=
+comment1.target=void\ lootRoom()
+comment2.params=
+comment2.target=void\ killEnemies()
+comment3.params=exit\ items\ enemies
+comment3.target=Room(boolean,\ java.util.Vector,\ java.util.Vector)
+comment3.text=\r\n\ Constructor\ for\ objects\ of\ class\ Room\r\n
+comment4.params=
+comment4.target=boolean\ getIsExit()
+comment5.params=
+comment5.target=java.util.Vector\ getItems()
+comment6.params=
+comment6.target=java.util.Vector\ getEnemies()
+numComments=7

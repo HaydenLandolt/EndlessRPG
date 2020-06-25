@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=WeaponDatabase
+comment1.params=id
+comment1.target=Weapon\ getWeaponFromDatabase(int)
+comment1.text=\ Table\ of\ Contents\:\r\n\ 1.\ Dagger\r\n\ \ \ \ \ \ \ 2.\ Club\r\n\ \ \ \ \ \ \ 3.\ Hand\ Axe\r\n\ \ \ \ \ \ \ 4.\ Spear\r\n\ \ \ \ \ \ \ 5.\ Broadsword\r\n\ \ \ \ \ \ \ 6.\ Longsword\r\n\ \ \ \ \ \ \ 7.\ Battle\ Axe\r\n\ \ \ \ \ \ \ 8.\ Hammer\r\n\ \ \ \ \ \ \ 9.\ Quarterstaff\r\n\ \ \ \ \ \ \ 10.\ Shortsword\r\n\ \ \ \ \ \ \ 11.\ Footman's\ Flail\r\n\ \ \ \ \ \ \ 12.\ Horseman's\ Flail\r\n\ \ \ \ \ \ \ 13.\ Military\ Fork\r\n\ \ \ \ \ \ \ 14.\ Glaive\r\n\ \ \ \ \ \ \ 15.\ Bill-Guisarme\r\n\ \ \ \ \ \ \ 16.\ Guisarme\r\n\ \ \ \ \ \ \ 17.\ Fauchard\r\n\ \ \ \ \ \ \ 18.\ Pike\r\n\ \ \ \ \ \ \ 19.\ Crossbow\r\n\ \ \ \ \ \ \ 20.\ Bow\r\n\ \ \ \ \ \ \ 21.\ Footman's\ Mace\r\n\ \ \ \ \ \ \ 22.\ Horseman's\ Mace\r\n\ \ \ \ \ \ \ 23.\ Morning\ Star\r\n\ \ \ \ \ \ \ 24.\ Partisan\r\n\ \ \ \ \ \ \ 25.\ Halberd\r\n\ \ \ \ \ \ \ 26.\ Lucern\ Hamme\r\n\ \ \ \ \ \ \ 27.\ Scimitar\r\n\ \ \ \ \ \ \ 28.\ Bardiche\r\n\ \ \ \ \ \ \ 29.\ Guisarme-Voulge\r\n\ \ \ \ \ \ \ 30.\ Bec\ de\ Corbin\r\n\ \ \ \ \ \ \ 31.\ Glaive-Guisarme\r\n\ \ \ \ \ \ \ 32.\ Fauchard-Fork\r\n
+numComments=2

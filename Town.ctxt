@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Town
+comment1.params=merchant\ blacksmith\ armourer\ alchemist\ tavern
+comment1.target=Town(boolean,\ boolean,\ boolean,\ boolean,\ boolean)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Town\r\n
+comment2.params=
+comment2.target=boolean\ getHasGeneralMerchant()
+comment3.params=
+comment3.target=boolean\ gethasBlacksmith()
+comment4.params=
+comment4.target=boolean\ getHasArmourer()
+comment5.params=
+comment5.target=boolean\ gethasTavern()
+numComments=6

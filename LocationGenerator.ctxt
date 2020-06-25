@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=LocationGenerator
+comment1.params=currentLocation\ enterDungeon
+comment1.target=Location\ nextLocation(Location,\ boolean)
+comment2.params=
+comment2.target=Location\ generateRoom()
+comment3.params=
+comment3.target=Location\ generateTown()
+comment4.params=currentLocation
+comment4.target=Location\ generateWorld(Location)
+numComments=5

@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Weapon
+comment1.params=name\ weight\ value\ medLow\ medHigh\ largeLow\ largeHigh\ isDoubleHanded
+comment1.target=Weapon(java.lang.String,\ int,\ int,\ int,\ int,\ int,\ int,\ boolean)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Weapon\r\n
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=int\ getMedAttackLow()
+comment3.params=
+comment3.target=int\ getMedAttackHigh()
+comment4.params=
+comment4.target=int\ getLargeAttackLow()
+comment5.params=
+comment5.target=int\ getLargeAttackHigh()
+comment6.params=
+comment6.target=boolean\ getIsDoubleHanded()
+comment7.params=
+comment7.target=boolean\ getIsEquipped()
+comment8.params=
+comment8.target=void\ equipWeapon()
+comment9.params=
+comment9.target=void\ unequipWeapon()
+numComments=11

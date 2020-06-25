@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Armour
+comment1.params=name\ health\ weight\ value\ defence\ armourLoaction
+comment1.target=Armour(java.lang.String,\ int,\ int,\ int,\ int,\ ArmourLocation)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Armour\r\n
+comment2.params=
+comment2.target=int\ getDefence()
+comment3.params=
+comment3.target=ArmourLocation\ getArmourLocation()
+numComments=4

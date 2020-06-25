@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Location
+comment1.params=terrain
+comment1.target=Location(TerrainType)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Location\r\n
+comment2.params=
+comment2.target=TerrainType\ getTerrain()
+numComments=3
