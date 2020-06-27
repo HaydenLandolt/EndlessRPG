@@ -10,6 +10,10 @@ public class Room extends Location
         items.clear();
     }
     
+    public void dropItem(Item item){
+        items.add(item);
+    }
+    
     public void killEnemies(){
         enemies.clear();
     }

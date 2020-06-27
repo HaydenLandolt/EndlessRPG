@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=ArmourDatabase
+comment1.params=id
+comment1.target=Armour\ getArmourFromDatabase(int)
+numComments=2

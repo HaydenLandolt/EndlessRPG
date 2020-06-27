@@ -1,6 +1,7 @@
-
+import java.util.Random;
 public class GameCharacter
 {
+    private Random random = new Random();
     private String name;
     private int xp = 0;
     private int curHealth;
@@ -25,7 +26,7 @@ public class GameCharacter
     }
 
     public void heal(int amount){
-        curHealth = Math.max(maxHealth, curHealth + amount);
+        curHealth = Math.min(maxHealth, curHealth + amount);
     }
     
     public void healAll(){
@@ -40,6 +41,18 @@ public class GameCharacter
         else{
          maxHealth += amount;   
         }
+    }
+    
+    public int attackMed(){
+        int damageRange = medAttackHigh - medAttackLow + 1;
+        damageRange = Math.abs(damageRange);
+        return random.nextInt(damageRange) + medAttackLow;
+    }
+    
+    public int attackLarge(){
+        int damageRange = largeAttackHigh - largeAttackLow + 1;
+        damageRange = Math.abs(damageRange);
+        return random.nextInt(damageRange) + largeAttackLow;
     }
     
     /**

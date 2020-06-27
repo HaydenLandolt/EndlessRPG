@@ -1,12 +1,17 @@
 import java.util.Vector;
+import java.util.Random;
 
 public class Player extends GameCharacter
 {
+    Random random = new Random();
+    
     private Location currentLocation;
     private Vector<Item> inventory;
     private int currentWeight;
     private int maxWeight;
     private int coins;
+    
+    private long xpForNextLevel = 100;
     
     private int level = 1;
     
@@ -46,7 +51,11 @@ public class Player extends GameCharacter
         if(item.getWeight() + getCurrentWeight() <= getMaxWeight()){
         inventory.add(item);
         addWeight(item.getWeight());
+        }
     }
+    
+    public void dropItem(Item item){
+        
     }
     
     public void addWeight(int weight){
@@ -55,6 +64,10 @@ public class Player extends GameCharacter
     
     public void removeWeight(int weight){
         currentWeight -= weight;
+    }
+    
+    public void increaseMaxWeight(int amount){
+        maxWeight += amount;
     }
     
     public void equipWeapon(Weapon weapon){
@@ -68,6 +81,18 @@ public class Player extends GameCharacter
         setMedAttack(weapon.getMedAttackLow(), weapon.getMedAttackHigh());
         setLargeAttack(weapon.getLargeAttackLow(), weapon.getLargeAttackHigh());
     }
+    }
+    
+    public void dropWeapon(Weapon weapon){
+        if(currentLocation instanceof World){
+         ((World)currentLocation).dropItem(weapon);   
+        }
+        else if(currentLocation instanceof Room){
+         ((Room)currentLocation).dropItem(weapon);   
+        }
+        inventory.remove(weapon);
+        if(weapon.getIsEquipped())
+        unequipWeapon();
     }
     
     public void unequipWeapon(){
@@ -84,6 +109,10 @@ public class Player extends GameCharacter
     }
     
     public void move(boolean enterDungeon){
+        if(getCurHealth() < getMaxHealth()){
+            heal(1);
+        }
+      
         currentLocation = LocationGenerator.nextLocation(currentLocation, enterDungeon);
     }
     
@@ -122,10 +151,11 @@ public class Player extends GameCharacter
     @Override
     public void addXP(int amount){
         super.addXP(amount);
-        if(getXP() % 100 > level && getXP() > 100){
+        if(getXP() >= xpForNextLevel){
          level++;
-         increaseHealthStat(6);
+         increaseHealthStat(10);
          healAll();
+         xpForNextLevel = Math.round(xpForNextLevel*1.75);
         }
     }
     
@@ -157,7 +187,20 @@ public class Player extends GameCharacter
         return level;
     }
     
+    public int getArrows(){
+     return arrows;   
+    }
+    
+    public int getBolts(){
+     return bolts;   
+    }
+   
     public void showInventory(){
+        System.out.println("\nAmmunition:");
+        System.out.println("Arrows - " + arrows);
+        System.out.println("Bolts - " + bolts + "\n");
+        
+        System.out.println("Inventory:");
         for (int i = 0; i < inventory.size(); i++){
          System.out.print((i+1) + ". " + inventory.get(i).getName());
          if(inventory.get(i) instanceof Weapon && ((Weapon)inventory.get(i)).getIsEquipped()){
@@ -170,8 +213,8 @@ public class Player extends GameCharacter
     @Override
     public String toString(){
      return "--------------------\n" + getName() + " Lvl." + level + " " + characterClass + "\n--------------------"
-                        + "\nLocation: " + getCurrentLocation().getTerrain() + "\nXP: " + getXP() +
-                        "\nCoins: " + getCoins() + "\nHealth: " + getCurHealth() + "/" + getMaxHealth() + 
+                        + "\nLocation: " + getCurrentLocation().getTerrain() + "\nXP: " + getXP() +"/" + xpForNextLevel +
+                        "\nCoins: " + getCoins() + "\nHealth: " + Math.max(0, getCurHealth()) + "/" + getMaxHealth() + 
                         "\nDefence: " + getDefence() + "    Damage: " + getMedAttackLow() + "-" + getMedAttackHigh() + "(S/M) " +
                         getLargeAttackLow() + "-" + getLargeAttackHigh() + "(L)";                        
     }
