@@ -40,6 +40,10 @@ public class Main
     
     }
 
+    public static void main(String args[]){
+        main();
+    }
+
     private static void enterLocation(Location location){
         if(location instanceof Room)
             handleRoom((Room)location);
@@ -84,6 +88,7 @@ public class Main
 
             String userString;
             while (true){
+                System.out.println();
                 userString = input.next();
                 if(userString == null){
                     System.out.println("\f" + player + "\n" + encounterText + "\n");
@@ -141,7 +146,7 @@ public class Main
                         else{
                             System.out.println("\f" + player + "\n");
                             System.out.println("You did not get away");
-                            System.out.println("\n1. Attack");
+                            System.out.println("\n1. Attack\n");
                             input.next();                            
                             System.out.println("\f" + player + "\n");
                             int result = handleFightActions(monsters);
@@ -209,6 +214,7 @@ public class Main
             String userString;
             while (true){
                 printActions(actions);
+                System.out.println();
                 userString = input.next();
                 if(userString == null){
                     System.out.println("\f" + player + "\n");
@@ -274,6 +280,7 @@ public class Main
             String userString;
             while (true){
                 printActions(actions);
+                System.out.println();
                 userString = input.next();
                 if(userString == null){
                     System.out.println("\f" + player + "\n");
@@ -339,6 +346,7 @@ public class Main
 
             String userString;
             while (true){
+                System.out.println();
                 userString = input.next();
                 if(userString == null){
                     System.out.println("\f" + player + "\n" + encounterText + "\n");
@@ -396,7 +404,7 @@ public class Main
                         else{
                             System.out.println("\f" + player + "\n");
                             System.out.println("You did not get away");
-                            System.out.println("\n1. Attack");
+                            System.out.println("\n1. Attack\n");
                             input.next();                            
                             System.out.println("\f" + player + "\n");
                             int result = handleFightActions(monsters);
@@ -459,6 +467,7 @@ public class Main
             String userString;
             while (true){
                 printActions(actions);
+                System.out.println();
                 userString = input.next();
                 if(userString == null){
                     System.out.println("\f" + player + "\n");
@@ -519,6 +528,7 @@ public class Main
             String userString;
             while (true){
                 printActions(actions);
+                System.out.println();
                 userString = input.next();
                 if(userString == null){
                     System.out.println("\f" + player + "\n");
@@ -550,7 +560,7 @@ public class Main
     }
 
     private static void handleTown(){
-        System.out.println("Found a town");
+        System.out.println("Found a town\n");
         input.nextLine();
     }
 
@@ -573,6 +583,7 @@ public class Main
 
         String userString;
         while (true){
+            System.out.println();
             userString = input.next();
             if(userString == null){
                 System.out.println("\f" + player + "\n");
@@ -664,6 +675,7 @@ public class Main
 
             String userString;
             while (true){
+                System.out.println();
                 userString = input.next();
                 if(userString == null){
                     System.out.println("\f" + player + "\n");
@@ -752,6 +764,7 @@ public class Main
             System.out.println("1. Done");
             String userString;
             while (true){
+                System.out.println();
                 userString = input.next();
                 return 1;           
             }   
@@ -802,6 +815,7 @@ public class Main
             System.out.println("1. Done");
             String userString;
             while (true){
+                System.out.println();
                 userString = input.next();
                 return -1;           
             }
@@ -810,6 +824,7 @@ public class Main
             System.out.println("1. Done");
             String userString;
             while (true){
+                System.out.println();
                 userString = input.next();
                 return 0;           
             }
@@ -870,6 +885,7 @@ public class Main
             System.out.println("1. Done");
             String userString;
             while (true){
+                System.out.println();
                 userString = input.next();
                 return -1;           
             }
@@ -878,6 +894,7 @@ public class Main
             System.out.println("1. Done");
             String userString;
             while (true){
+                System.out.println();
                 userString = input.next();
                 return 1;           
             }
@@ -886,6 +903,7 @@ public class Main
             System.out.println("1. Done");
             String userString;
             while (true){
+                System.out.println();
                 userString = input.next();
                 return 0;           
             }
@@ -921,6 +939,7 @@ public class Main
 
         String userString;
         while (true){
+            System.out.println();
             userString = input.next();
             if(userString == null){
                 System.out.println("\f");
@@ -989,6 +1008,7 @@ public class Main
 
         String userString;
         while(true){
+            System.out.println();
             userString = input.next();
             if(userString == null){
                 System.out.println("\f" + player + "\n");
@@ -1037,6 +1057,7 @@ public class Main
 
         String userString;
         while(true){
+            System.out.println();
             userString = input.next();
             if(userString == null){
                 System.out.println("\f" + player + "\n");
@@ -1099,6 +1120,7 @@ public class Main
         }
         System.out.println("\n1. Done");
         String userString;
+        System.out.println();
         userString = input.next();   
         System.out.print("\f" + player + "\n");
     }
@@ -1118,18 +1140,21 @@ public class Main
         }
         System.out.println("\n1. Done");
         String userString;
+        System.out.println();
         userString = input.next();   
         System.out.print("\f" + player + "\n");
     }
 
     private static void handleCharacterSetUp(){
+        System.out.println();
         input.nextLine();
-        System.out.println("\fName your adventurer:");
+        System.out.println("\fName your adventurer:\n");
         String playerName = input.nextLine();
         System.out.println("\fChoose your class:");
         System.out.println("1. Knight\n2. Ranger\n3. Bard\n4. " +
-            "Thief\n5. Cleric\n6. Wizard");
+            "Thief\n5. Cleric\n6. Wizard\n");
         int classSelection = input.nextInt();
+        System.out.println();
         input.nextLine();
         CharacterClass classChoice = null;
         switch(classSelection){
@@ -1159,7 +1184,7 @@ public class Main
 
         //give starting weapon
         System.out.println("\fChoose your starting weapon:");
-        System.out.println("1. Dagger\n2. Club\n3. Hand Axe\n4. Spear");
+        System.out.println("1. Dagger\n2. Club\n3. Hand Axe\n4. Spear\n");
         int weaponChoice = input.nextInt();
         input.nextLine();
         Weapon startingWeapon = WeaponDatabase.getWeaponFromDatabase(weaponChoice);
@@ -1181,6 +1206,7 @@ public class Main
 
         String userString;
         while(true){
+            System.out.println();
             userString = input.next();
             if(userString != null){
                 int userDecision = 0;
