@@ -1,5 +1,6 @@
 import java.util.Random;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MonsterDatabase
 {
@@ -103,5 +104,16 @@ public class MonsterDatabase
       monsterArr.add(new Monster(CharacterSize.LARGE,  "Wyvern",               ((random.nextInt(8)+1)*7)+7, 7, 140, 2, 16, 1, 6));
       monsterArr.add(new Monster(CharacterSize.LARGE,  "Yeti",                 ((random.nextInt(8)+1)*4)+4, 4, 42, 2, 12, 2, 12));
       monsterArr.add(new Monster(CharacterSize.MEDIUM, "Zombie",               (random.nextInt(8)+1)*2, 2, 7, 1, 8, 1, 8));
+   }
+
+
+   public static HashMap toHashMap() {
+      HashMap<String, Monster> monsterMap = new HashMap<String, Monster>();
+
+      for (Monster m: monsterArr) {
+         monsterMap.put(m.getName(), m);
+      }
+
+      return monsterMap;
    }
 }
